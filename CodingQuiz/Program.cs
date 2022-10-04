@@ -1,4 +1,4 @@
-﻿//Here I initialize all my arrays with questions and answers
+﻿//Here all the arrays with questions and answers are initialized
 //There's an array containing the question strings, one containing the answer option strings, and one containing the number of the correct option  
 string[] questions = {
     "What is a string?",
@@ -55,69 +55,73 @@ int[] answersIndex = {
     0
 };
 
-//Here I have a little intro, getting the players name and such.
+//Here the intro, getting the players name and such.
 Console.Clear();
 Console.WriteLine("\nWelcome to my coding quiz!");
 Console.WriteLine("Please enter your name to start: ");
 string playerName = Console.ReadLine();
 Console.WriteLine("\nReady up " + playerName + "\nHere we go!\n");
-
-//Here I initialize the QNA class so I can use it later on
-QNA QuizBackend = new QNA();
-
-//Here's the loop which loops through all the questions in the questions array
-for (int QNAIncr = 0; QNAIncr < questions.Length; QNAIncr++)
+Quiz();
+//Here I make a method to do the quiz, just to keep it a bit cleaner
+void Quiz()
 {
-    Console.Clear();
-    //Here it sets the Question string from the QNA class to what it is in the array at this index (which it gets from QNAIncr)
-    QuizBackend.Question = questions[QNAIncr];
-    //Here it loops through to print all the options
-    for (int i = 0; i < 4; i++) QuizBackend.Answers[i] = answers[QNAIncr, i];
+    //Here the QNA class is initialized as QuizBackend
+    QNA QuizBackend = new QNA();
 
-    //Here it sets the answer int to what the answer is at this index in the answersIndex array.
-    QuizBackend.Answer = answersIndex[QNAIncr];
-    Console.WriteLine("\nQuestion " + (QNAIncr + 1) + ") " + QuizBackend.Question + "\n");
-    for (int i = 0; i < 4; i++) Console.WriteLine(i + 1 + ") " + QuizBackend.Answers[i]);
-    //Here I initialize a string that's gonna contain what the player answers
-    string playerAnswer = "";
-    //Here it reads the input from the player and uses it as the answer
-    playerAnswer = Console.ReadLine();
-    if (playerAnswer != "1" || playerAnswer != "2" || playerAnswer != "3"|| playerAnswer != "4") {
-        Console.WriteLine("Invalid answer, please try again");
+    //Here's the loop which loops through all the questions in the questions array
+    for (int QNAIncr = 0; QNAIncr < questions.Length; QNAIncr++)
+    {
+        //Here I clear the console each time so it's easier to read
+        Console.Clear();
+        //Here it sets the Question string from the QNA class to what it is in the array at this index (which it gets from QNAIncr)
+        QuizBackend.Question = questions[QNAIncr];
+        //Here it loops through to print all the options
+        for (int i = 0; i < 4; i++) QuizBackend.Answers[i] = answers[QNAIncr, i];
+
+        //Here it sets the answer int to what the answer is at this index in the answersIndex array.
+        QuizBackend.Answer = answersIndex[QNAIncr];
+        Console.WriteLine("\nQuestion " + (QNAIncr + 1) + ") " + QuizBackend.Question + "\n");
+        for (int i = 0; i < 4; i++) Console.WriteLine(i + 1 + ") " + QuizBackend.Answers[i]);
+        //Here I initialize a string that's gonna contain what the player answers
+        string playerAnswer = "";
+        //Here it reads the input from the player and uses it as the answer
         playerAnswer = Console.ReadLine();
+        //Here it converts the playerAnswer string to an int so it can be used to compare to the QuizBackend.Answer int
+        //if the answer is correct it prints 'correct', waits 0.4s then increments the score and the streak
+        if (Convert.ToInt32(playerAnswer) - 1 == QuizBackend.Answer)
+        {
+            Console.WriteLine("Correct!");
+            Thread.Sleep(400);
+            QuizBackend.Score++;
+            QuizBackend.Streak++;
+        }
+        //if the answer is wrong it prints 'wrong', waits 0.4s then saves the streak and sets it to 0
+        else
+        {
+            Console.WriteLine("Wrong!");
+            Thread.Sleep(400);
+            QuizBackend.OldStreak = QuizBackend.Streak;
+            QuizBackend.Streak = 0;
+        }
     }
-    //Here it converts the playerAnswer string to an int so it can be used to compare to the QuizBackend.Answer int
-    if (Convert.ToInt32(playerAnswer) - 1 == QuizBackend.Answer)
-    {
-        Console.WriteLine("Correct!");
-        Thread.Sleep(400);
-        QuizBackend.Score++;
-        QuizBackend.Streak++;
-    }
-    else
-    {
-        Console.WriteLine("Wrong!");
-        Thread.Sleep(400);
-        QuizBackend.OldStreak = QuizBackend.Streak;
-        QuizBackend.Streak = 0;
-    }
+    Console.Clear();
+    //Here it checks if the current streak or the old streak is the longest, and the longest one gets shown as longest streak
+    int LongestStreak = (QuizBackend.Streak > QuizBackend.OldStreak) ? QuizBackend.Streak : QuizBackend.OldStreak;
+
+    //Here it converts the score to a float, so that it can be used to calculate the percent of correct answers
+    float floatScore = (float)QuizBackend.Score;
+    //here it calculates the percentage of correct answers
+    float PercentageCorrect = (floatScore / questions.Length) * 100;
+    //here it prints the results
+    Console.WriteLine("\nHere are the results: ");
+    Console.WriteLine("Score: " + QuizBackend.Score + "\nLongest Streak: " + LongestStreak + "\nPercentage Correct: " + PercentageCorrect + "%");
+    retry();
 }
-Console.Clear();
-int LongestStreak = (QuizBackend.Streak > QuizBackend.OldStreak) ? QuizBackend.Streak : QuizBackend.OldStreak;
-
-float floatScore = (float)QuizBackend.Score;
-float PercentageCorrect = (floatScore / questions.Length) * 100;
-Console.WriteLine("\nHere come the results: ");
-Console.WriteLine("Score: " + QuizBackend.Score + "\nLongest Streak: " + LongestStreak + "\nPercentage Correct: " + PercentageCorrect + "%");
-
-
-
-/*
-Gir navn
-Gjør quiz
-***BACKEND***
-Teller streak
-Teller poeng
-% rette spørs
-play again?
-*/
+//Here's the method that asks if you want to try again
+void retry()
+{
+    Console.WriteLine("Do you wish to try again? y/n");
+    string answer = Console.ReadLine();
+    if (answer == "y") Quiz(); return;
+    Environment.Exit(0);
+}
