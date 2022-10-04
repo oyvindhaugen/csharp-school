@@ -2,7 +2,7 @@
 //There's an array containing the question strings, one containing the answer option strings, and one containing the number of the correct option  
 string[] questions = {
     "What is a string?",
-    "What does a float do?",
+    "What is a float do?",
     "What is the difference between Console.Write() and Console.WriteLine()?",
     "What is the syntax for an array of numbers with decimals?",
     "If you want to get the first element of an array, what do you write?",
@@ -54,13 +54,23 @@ int[] answersIndex = {
     1,
     0
 };
-
+string ascii = @"
+_________            .___.__                 ________        .__        
+\_   ___ \  ____   __| _/|__| ____    ____   \_____  \  __ __|__|_______
+/    \  \/ /  _ \ / __ | |  |/    \  / ___\   /  / \  \|  |  \  \___   /
+\     \___(  <_> ) /_/ | |  |   |  \/ /_/  > /   \_/.  \  |  /  |/    / 
+ \______  /\____/\____ | |__|___|  /\___  /  \_____\ \_/____/|__/_____ \
+        \/            \/         \//_____/          \__>              \
+";
 //Here the intro, getting the players name and such.
 Console.Clear();
+//This shows some ASCII art
+Console.WriteLine(ascii);
 Console.WriteLine("\nWelcome to my coding quiz!");
 Console.WriteLine("Please enter your name to start: ");
 string playerName = Console.ReadLine();
 Console.WriteLine("\nReady up " + playerName + "\nHere we go!\n");
+
 Quiz();
 //Here I make a method to do the quiz, just to keep it a bit cleaner
 void Quiz()
@@ -80,6 +90,8 @@ void Quiz()
 
         //Here it sets the answer int to what the answer is at this index in the answersIndex array.
         QuizBackend.Answer = answersIndex[QNAIncr];
+        
+        Console.WriteLine(ascii);
         Console.WriteLine("\nQuestion " + (QNAIncr + 1) + ") " + QuizBackend.Question + "\n");
         for (int i = 0; i < 4; i++) Console.WriteLine(i + 1 + ") " + QuizBackend.Answers[i]);
         //Here I initialize a string that's gonna contain what the player answers
