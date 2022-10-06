@@ -70,7 +70,7 @@ Console.WriteLine("\nWelcome to my coding quiz!");
 Console.WriteLine("Please enter your name to start: ");
 string playerName = Console.ReadLine();
 Console.WriteLine("\nReady up " + playerName + "\nHere we go!\n");
-
+Thread.Sleep(300);
 Quiz();
 //Here I make a method to do the quiz, just to keep it a bit cleaner
 void Quiz()
