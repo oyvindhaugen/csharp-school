@@ -2,7 +2,7 @@
 //There's an array containing the question strings, one containing the answer option strings, and one containing the number of the correct option  
 string[] questions = {
     "What is a string?",
-    "What is a float do?",
+    "What is a float?",
     "What is the difference between Console.Write() and Console.WriteLine()?",
     "What is the syntax for an array of numbers with decimals?",
     "If you want to get the first element of an array, what do you write?",
