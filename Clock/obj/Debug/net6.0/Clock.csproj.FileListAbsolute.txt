@@ -1,0 +1,15 @@
+C:\Users\ØyvindStensland\Desktop\C#\Clock\bin\Debug\net6.0\Clock.exe
+C:\Users\ØyvindStensland\Desktop\C#\Clock\bin\Debug\net6.0\Clock.deps.json
+C:\Users\ØyvindStensland\Desktop\C#\Clock\bin\Debug\net6.0\Clock.runtimeconfig.json
+C:\Users\ØyvindStensland\Desktop\C#\Clock\bin\Debug\net6.0\Clock.dll
+C:\Users\ØyvindStensland\Desktop\C#\Clock\bin\Debug\net6.0\Clock.pdb
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.csproj.AssemblyReference.cache
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.AssemblyInfoInputs.cache
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.AssemblyInfo.cs
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.csproj.CoreCompileInputs.cache
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.dll
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\refint\Clock.dll
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.pdb
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\Clock.genruntimeconfig.cache
+C:\Users\ØyvindStensland\Desktop\C#\Clock\obj\Debug\net6.0\ref\Clock.dll
