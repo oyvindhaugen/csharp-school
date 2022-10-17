@@ -4,8 +4,9 @@ Console.WriteLine("Enter current minute: ");
 string? usrMinute = Console.ReadLine();
 Console.WriteLine("Enter current hour: ");
 string? usrHour = Console.ReadLine();
+Console.Clear();
 Clock clock = new Clock(Convert.ToInt32(usrSecond), Convert.ToInt32(usrMinute), Convert.ToInt32(usrHour));
-Console.WriteLine("Index: \nExit: 0\nPrint hour: 1\nPrint minute: 2\nPrint second: 3\nSet hour: 4\nSet minute: 5\nSet second: 6\nAdd hour: 7\nAdd minute: 8\nAdd second: 9");
+Console.WriteLine("Index: \nExit: 0\nPrint hour: 1\nPrint minute: 2\nPrint second: 3\nSet hour: 4\nSet minute: 5\nSet second: 6\nAdd hour: 7\nAdd minute: 8\nAdd second: 9\nPrint time: 10\nAdd second: 11\n");
 while (true)
 {
     string? usrInput = Console.ReadLine();
@@ -15,15 +16,15 @@ while (true)
     }
     else if (Convert.ToInt32(usrInput) == 1)
     {
-        Console.WriteLine(clock.getHour());
+        Console.WriteLine(clock.getHour() + " hour(s)");
     }
     else if (Convert.ToInt32(usrInput) == 2)
     {
-        Console.WriteLine(clock.getMinute());
+        Console.WriteLine(clock.getMinute() + " minute(s)");
     }
     else if (Convert.ToInt32(usrInput) == 3)
     {
-        Console.WriteLine(clock.getSecond());
+        Console.WriteLine(clock.getSecond() + " second(s)");
     }
     else if (Convert.ToInt32(usrInput) == 4)
     {
@@ -66,6 +67,13 @@ while (true)
         usrInput = Console.ReadLine();
         clock.addSecond(Convert.ToInt32(usrInput));
         Console.WriteLine($"Second is now set to: {clock.getSecond()}");
+    }
+    else if (Convert.ToInt32(usrInput) == 10) {
+        Console.WriteLine(clock.ToString());
+    }
+    else if (Convert.ToInt32(usrInput) == 11) {
+        clock.tick();
+        Console.WriteLine("1 second has now been added");
     }
     else
     {

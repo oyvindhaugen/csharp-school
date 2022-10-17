@@ -1,0 +1,15 @@
+D:\C#\dsds\CSharpSchoolStuff\Clock\bin\Debug\net6.0\Clock.exe
+D:\C#\dsds\CSharpSchoolStuff\Clock\bin\Debug\net6.0\Clock.deps.json
+D:\C#\dsds\CSharpSchoolStuff\Clock\bin\Debug\net6.0\Clock.runtimeconfig.json
+D:\C#\dsds\CSharpSchoolStuff\Clock\bin\Debug\net6.0\Clock.dll
+D:\C#\dsds\CSharpSchoolStuff\Clock\bin\Debug\net6.0\Clock.pdb
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.csproj.AssemblyReference.cache
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.AssemblyInfoInputs.cache
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.AssemblyInfo.cs
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.csproj.CoreCompileInputs.cache
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.dll
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\refint\Clock.dll
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.pdb
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\Clock.genruntimeconfig.cache
+D:\C#\dsds\CSharpSchoolStuff\Clock\obj\Debug\net6.0\ref\Clock.dll
