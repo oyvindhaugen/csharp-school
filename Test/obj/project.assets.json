@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ØyvindStensland\\Desktop\\C#\\Clock\\Clock.csproj",
-      "projectName": "Clock",
-      "projectPath": "C:\\Users\\ØyvindStensland\\Desktop\\C#\\Clock\\Clock.csproj",
+      "projectUniqueName": "C:\\Users\\ØyvindStensland\\Desktop\\C#\\Test\\Test.csproj",
+      "projectName": "Test",
+      "projectPath": "C:\\Users\\ØyvindStensland\\Desktop\\C#\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\ØyvindStensland\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ØyvindStensland\\Desktop\\C#\\Clock\\obj\\",
+      "outputPath": "C:\\Users\\ØyvindStensland\\Desktop\\C#\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ØyvindStensland\\AppData\\Roaming\\NuGet\\NuGet.Config"
