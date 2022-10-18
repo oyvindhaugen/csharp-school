@@ -20,70 +20,70 @@ while (true)
             Environment.Exit(0);
             break;
         case "1":
-        //prints currnet amount of hours on the clock
+            //prints currnet amount of hours on the clock
             Console.WriteLine(clock.getHour() + " hour(s)");
             break;
         case "2":
-        //prints current amount of minutes on the clock
+            //prints current amount of minutes on the clock
             Console.WriteLine(clock.getMinute() + " minute(s)");
             break;
         case "3":
-        //prints current amount of seconds on the clock
+            //prints current amount of seconds on the clock
             Console.WriteLine(clock.getSecond() + " second(s)");
             break;
         case "5":
-        //here it accepts user input to set hour
+            //here it accepts user input to set hour
             Console.WriteLine("Enter hour you wish to set it to: ");
             usrInput = Console.ReadLine();
             clock.setHour(Convert.ToInt32(usrInput));
             Console.WriteLine($"Hour is now set to: {clock.getHour()}");
             break;
         case "6":
-                //here it accepts user input to set minute
+            //here it accepts user input to set minute
             Console.WriteLine("Enter minute you wish to set it to: ");
             usrInput = Console.ReadLine();
             clock.setMinute(Convert.ToInt32(usrInput));
             Console.WriteLine($"Minute is now set to: {clock.getMinute()}");
             break;
         case "7":
-                //here it accepts user input to set second
+            //here it accepts user input to set second
             Console.WriteLine("Enter second you wish to set it to: ");
             usrInput = Console.ReadLine();
             clock.setSecond(Convert.ToInt32(usrInput));
             Console.WriteLine($"Second is now set to: {clock.getSecond()}");
             break;
         case "8":
-        //here it accepts user input to add to hour
+            //here it accepts user input to add to hour
             Console.WriteLine("Enter amount of hours you want to add: ");
             usrInput = Console.ReadLine();
             clock.addHour(Convert.ToInt32(usrInput));
             Console.WriteLine($"Hour is now set to: {clock.getHour()}");
             break;
         case "9":
-        //here it accepts user input to add to minute
+            //here it accepts user input to add to minute
             Console.WriteLine("Enter amount of minutes you want to add: ");
             usrInput = Console.ReadLine();
             clock.addMinute(Convert.ToInt32(usrInput));
             Console.WriteLine($"Minute is now set to: {clock.getMinute()}");
             break;
         case "10":
-        //here it accepts user input to add to second
+            //here it accepts user input to add to second
             Console.WriteLine("Enter amount of seconds you want to add: ");
             usrInput = Console.ReadLine();
             clock.addSecond(Convert.ToInt32(usrInput));
             Console.WriteLine($"Second is now set to: {clock.getSecond()}");
             break;
         case "4":
-        //Here it prints the time
+            //Here it prints the time
             Console.WriteLine(clock.ToString());
             break;
         case "11":
-        //Here it adds 1 second to the seconds
+            //Here it adds 1 second to the seconds
             clock.tick();
             Console.WriteLine("1 second has now been added");
             break;
         default:
-        //here it prints the error message
+            //here it prints the error message
             Console.WriteLine("Not a valid operation, please try again.");
             break;
     }
